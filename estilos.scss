@@ -1,0 +1,87 @@
+$bg-color: #F1E9DA;
+$link-text-color: #fff;
+$button-bg-1: #ff4136;
+$button-bg-2: #ffdc00;
+$button-bg-3: #0074d9;
+$button-bg-4: #7fdbff;
+$button-bg-5: #2ecc40;
+$button-bg-6: #ff851b;
+$button-bg-7: #111111;
+$border-radius: 6px;
+$overlay-color: #fff;
+$contenido:"+";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $link-text-color;
+  text-transform: capitalize;
+  /* background-color: - add your own background-color */
+  font: {
+    family: 'Roboto', sans-serif; /* put your font-family */
+    size: 18px;
+  }
+  padding: 20px 0px;
+  width: 150px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.btn-red{
+    background-color: $button-bg-1;
+}
+.btn-yellow{
+    background-color: $button-bg-2;
+}
+.btn-blue{
+    background-color: $button-bg-3;
+}
+.btn-light-blue{
+    background-color: $button-bg-4;
+}
+.btn-green{
+    background-color: $button-bg-5;
+}
+.btn-orange{
+    background-color: $button-bg-6;
+}
+.btn-black{
+    background-color: $button-bg-7;
+}
+
+/* effect-1 styles */
+
+.effect.effect-1 {
+  transition: all 0.2s linear 0s;  
+  
+  &:before {
+    /*content: "\f178";*/
+    content: $contenido;
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+  
+  &:hover {
+    text-indent: -20px;
+    
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
